@@ -12,11 +12,9 @@
                 if (n > arr[i])
                 {
                     Console.WriteLine("True");
+                    break;
                 }
-                else
-                {
-                    Console.WriteLine("False");
-                }
+              
             }
 
 
@@ -33,23 +31,16 @@
 
             //verilmis ededin polindrom olub olmadigini yoxlayan proqram yazin
             int number = 12321;
-            int reversed = 1;
-            for (int i = 1; i >0; i--)
+            int qaliq;
+            int reverse = 0;
+            while (number!=0)
             {
-                reversed *=10;
-                reversed += number % 10;
+                qaliq=number%10;
+                reverse = (reverse * 10) + qaliq;
+                number -= qaliq;
                 number /= 10;
-
             }
-            if (number==reversed)
-            {
-                Console.WriteLine("eded polidromdur");
-            }
-            else
-            {
-                Console.WriteLine("eded polidrom deyil");
-            }
-
+            Console.WriteLine("Sizizn reqemin polidromu" + reverse);
 
             //verilmis ededin faktorialini tapin
             int number1 = 5;
@@ -146,6 +137,21 @@
             }
             Console.WriteLine();
             Console.ReadLine();
+
+
+
+
+            //ilk 20 fibonacci ededini tapin
+            int a = 0;
+            int b = 1;
+            int count = 0;
+                while(count<20)
+            { 
+                Console.WriteLine(a);
+                b = a + b;
+                a = b - a;
+                count++;
+            }
         }
     }
 }
