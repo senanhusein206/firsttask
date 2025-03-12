@@ -77,15 +77,20 @@
 
 
             //verilmis ededin sade ve ya murekkeb oldugunu tapan alqoritm yazin
-            int number3 = 7;
-            if (number3%2==0 && number3 % 3 == 0  && number3 % 5 == 0 && number3 % 7 == 0 && number3 % 11 == 0)
-            {
-                Console.WriteLine("Murekkebdir");
-            }
-            else
-            {
-                Console.WriteLine("sadedir");
-            }
+             int number3 = 7;
+
+            for (int i =2; i<number3; i++)
+            { if(number3%i==0)
+                {
+                    Console.WriteLine("Murekkeb");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("sadedir");
+                    break;
+                } 
+                        }
 
             //sozlerden ibaret arrayin icerisinde verilen sozu tapin
             string[] arr2 = { "Galatasaray", "Real MAdrid", "Liverpool", "Inter", "Bayer Leverkusen" };
@@ -134,13 +139,8 @@
 
             string[] array = { "Baki", "Semkir", "Sumqayit", "Gence" };
 
-
-
-
-
-           
           
-            Console.WriteLine("\nTersten Ekrana Yaz\n");
+            Console.WriteLine("Tersten Ekrana Yaz");
             Array.Reverse(array);
 
             foreach (string i in array)
