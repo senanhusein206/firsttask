@@ -22,10 +22,19 @@
 
 
 
+            
             //ededlerden ibaret bir array verilir, bu arreyin icerisindeki en boyuk elementi tapin
-            int[] arr1 = { 1, 2, 3, 4, 5, 6, 7, 8};
+            int[] arr1 = { 1, 2, 3, 4, 5, 6, 7, 8 };
+            int enBig = arr1[0];
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                if (enBig < arr1[i])
+                {
+                    enBig = arr1[i];
+                }
+            }
 
-            Console.WriteLine(arr1.Max());
+            Console.WriteLine(enBig);
 
 
 
@@ -40,7 +49,7 @@
                 number -= qaliq;
                 number /= 10;
             }
-            Console.WriteLine("Sizizn reqemin polidromu" + reverse);
+            Console.WriteLine("Sizizn reqemin polidromu " + reverse);
 
             //verilmis ededin faktorialini tapin
             int number1 = 5;
@@ -53,11 +62,14 @@
 
 
             //verilmis ededin reqemlerinin hasilini tapan proqram yazin
-            int number2 = 123;
+            int number2 = 1234;
             int hasil = 1;
+            int qaliq1;
+
             while (number2>0)
             {
-                hasil *= number2 % 10;
+                qaliq1 = number2 % 10;
+                hasil *= qaliq1;
                 number2 /= 10;
             }
             Console.WriteLine(hasil);
@@ -141,16 +153,7 @@
 
 
 
-            //ilk 20 fibonacci ededini tapin
-            int a = 0;
-            int b = 1;
-            int count = 0;
-                while(count<20)
-            { 
-                Console.WriteLine(a);
-                b = a + b;
-                a = b - a;
-                count++;
+           
             }
         }
     }
